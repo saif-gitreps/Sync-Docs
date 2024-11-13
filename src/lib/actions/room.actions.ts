@@ -4,6 +4,7 @@ import { nanoid } from "nanoid";
 import { liveblocks } from "../liveblocks";
 import { revalidatePath } from "next/cache";
 import { parseStringify } from "../utils";
+import { RoomData } from "@liveblocks/node";
 
 export const createDocument = async ({ userId, email }: CreateDocumentParams) => {
    const roomId = nanoid();
@@ -53,5 +54,33 @@ export const getDocument = async ({
       return parseStringify(room);
    } catch (error) {
       console.error("Error getting document", error);
+      return null;
+   }
+};
+
+export const getAllDocuments = async (email: string) => {
+   try {
+      const rooms = await liveblocks.getRooms({ userId: email });
+
+      return parseStringify(rooms);
+   } catch (error) {
+      console.error("Error getting document", error);
+      return null;
+   }
+};
+
+export const updateDocument = async (roomId: string, title: string) => {
+   try {
+      const updatedRoom = await liveblocks.updateRoom(roomId, {
+         metadata: {
+            title,
+         },
+      });
+
+      revalidatePath(`/documents/${roomId}`);
+
+      return parseStringify(updatedRoom);
+   } catch (error) {
+      console.log(error);
    }
 };
