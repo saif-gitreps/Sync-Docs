@@ -3,9 +3,12 @@ import React from "react";
 
 import { LiveblocksProvider, ClientSideSuspense } from "@liveblocks/react/suspense";
 import Loader from "@/components/Loader";
-import { getClerkUsers } from "@/lib/actions/user.actions";
+import { getClerkUsers, getDocumentUsers } from "@/lib/actions/user.actions";
+import { useUser } from "@clerk/nextjs";
 
 function Provider({ children }: { children: React.ReactNode }) {
+   const { user: clerkUser } = useUser();
+
    return (
       <LiveblocksProvider
          authEndpoint="/api/liveblocks-auth"
@@ -13,6 +16,15 @@ function Provider({ children }: { children: React.ReactNode }) {
             const users = await getClerkUsers({ userIds });
 
             return users;
+         }}
+         resolveMentionSuggestions={async ({ text, roomId }) => {
+            const roomUsers = await getDocumentUsers({
+               roomId,
+               currentUser: clerkUser?.emailAddresses[0]?.emailAddress as string,
+               text,
+            });
+
+            return roomUsers;
          }}
       >
          <ClientSideSuspense fallback={<Loader />}>{children}</ClientSideSuspense>

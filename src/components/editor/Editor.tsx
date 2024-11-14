@@ -31,6 +31,7 @@ function Placeholder() {
 }
 
 export function Editor({
+   // eslint-disable-next-line @typescript-eslint/no-unused-vars
    roomId,
    currentUserType,
 }: {
