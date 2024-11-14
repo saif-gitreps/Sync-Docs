@@ -47,8 +47,11 @@ function AllowAccessModal({
 
    return (
       <Dialog open={open} onOpenChange={setOpen}>
-         <DialogTrigger>
-            <Button className="h-9 gap1 px-4">
+         <DialogTrigger disabled={currentUserType !== "editor"}>
+            <Button
+               className={`h-9 gap1 px-4 ${currentUserType !== "editor" && "opacity-20"}`}
+               disabled={currentUserType !== "editor"}
+            >
                <Lock size={24} />
                <div className="hidden sm:block">Allow access</div>
             </Button>
