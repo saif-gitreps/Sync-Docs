@@ -43,7 +43,7 @@ declare type UserTypeSelectorParams = {
    onClickHandler?: (value: string) => void;
 };
 
-declare type ShareDocumentDialogProps = {
+declare type AllowAccessModalProps = {
    roomId: string;
    collaborators: User[];
    creatorId: string;

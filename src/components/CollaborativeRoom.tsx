@@ -10,6 +10,7 @@ import { Input } from "./ui/input";
 import { Edit, Eye } from "lucide-react";
 import { updateDocument } from "@/lib/actions/room.actions";
 import Loader from "./Loader";
+import AllowAccessModal from "./AllowAccessModal";
 
 function CollaborativeRoom({
    roomId,
@@ -111,6 +112,14 @@ function CollaborativeRoom({
                   </div>
                   <div className="flex w-full flex-1 justify-end gap-2 sm:gap-3">
                      <ActiveCollaborators />
+
+                     <AllowAccessModal
+                        roomId={roomId}
+                        collaborators={users}
+                        creatorId={roomMetadata?.creatorId}
+                        currentUserType={currentUserType}
+                     />
+
                      <SignedOut>
                         <SignInButton />
                      </SignedOut>
