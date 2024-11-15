@@ -3,7 +3,7 @@ import React from "react";
 
 function SignInPage() {
    return (
-      <main className="auth-page">
+      <main className="auth-page bg-black">
          <SignIn />
       </main>
    );

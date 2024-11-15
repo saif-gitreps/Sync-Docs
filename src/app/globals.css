@@ -90,10 +90,6 @@
       @apply custom-scrollbar h-[calc(100vh-140px)] gap-5 overflow-auto pt-5 lg:flex-row lg:items-start lg:justify-center  xl:gap-10 xl:pt-10;
    }
 
-   .header {
-      @apply min-h-[72px] bg-black flex items-center justify-between w-full gap-2 px-4;
-   }
-
    .document-list-container {
       @apply flex flex-col items-center mb-10 w-full gap-10 px-5;
    }
@@ -184,7 +180,7 @@
 .cl-signIn-start,
 .cl-signUp-start,
 .cl-footer {
-   background: #c3c3c3;
+   background: #2a2a2a;
    box-shadow: none;
    padding: 20px;
 }
