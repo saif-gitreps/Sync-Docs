@@ -25,7 +25,7 @@ function Notifications() {
    return (
       <Popover>
          <PopoverTrigger className="relative flex size-10 items-center justify-center rounded-lg">
-            <Bell size={24} />
+            <Bell size={24} className="stroke-white" />
 
             {count && (
                <div className="absolute right-2 top-2 z-20 size-2 rounded-full bg-red-500" />
@@ -41,7 +41,7 @@ function Notifications() {
             >
                <InboxNotificationList>
                   {unreadNotifications.length <= 0 && (
-                     <div className="p-4 text-center text-gray-500">
+                     <div className="p-4 text-center text-black">
                         No new notifications
                      </div>
                   )}
@@ -51,7 +51,7 @@ function Notifications() {
                         <InboxNotification
                            key={notification.id}
                            inboxNotification={notification}
-                           className="bg-dark-200 text-white"
+                           className="bg-gray-200 text-black"
                            href={`/documents/${notification.roomId}`}
                            kinds={{
                               thread: (props) => (

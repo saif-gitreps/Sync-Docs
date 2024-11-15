@@ -26,9 +26,9 @@ function UserTypeSelector({
          onValueChange={(type: UserType) => accessChangeHandler(type)}
       >
          <SelectTrigger className="shad-select">
-            <SelectValue placeholder="Theme" />
+            <SelectValue placeholder="Allow" />
          </SelectTrigger>
-         <SelectContent className="border-none bg-dark-200">
+         <SelectContent className="border-none">
             <SelectItem value="viewer" className="shad-select">
                Allow view
             </SelectItem>

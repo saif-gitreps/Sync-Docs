@@ -35,7 +35,7 @@ async function HomePage() {
          {documents.data.length > 0 ? (
             <div className="document-list-container">
                <div className="document-list-title">
-                  <div className="text-28-semibold">All your documents</div>
+                  <div className="text-28-semibold">Your documents</div>
                   <AddDocumentButton
                      userId={clerkUser.id}
                      email={clerkUser.emailAddresses[0].emailAddress}
@@ -54,14 +54,14 @@ async function HomePage() {
                               href={`/documents/${document.id}`}
                               className="flex flex-1 items-center gap-4"
                            >
-                              <div className="hidden rounded-md bg-dark-500 p-2 sm:block">
-                                 <File size={40} />
+                              <div className="hidden rounded-md p-2 sm:block">
+                                 <File size={40} className="" />
                               </div>
                               <div className="space-y-1">
                                  <p className="line-clamp-1 text-lg">
                                     {document.metadata.title}
                                  </p>
-                                 <p className="text-sm text-blue-100">
+                                 <p className="text-sm text-black-100">
                                     Created about {dateConverter(document.createdAt)}
                                  </p>
                               </div>

@@ -1,25 +1,13 @@
-import Image from "next/image";
+import { ScrollText } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
 function Header({ children, className }: HeaderProps) {
    return (
       <div className={`header ${className}`}>
-         <Link href="/" className="md:flex-1">
-            <Image
-               src="/assets/icons/logo.svg"
-               alt="logo"
-               width={120}
-               height={32}
-               className="hidden md:block"
-            />
-            <Image
-               src="/assets/icon/logo-icon.svg"
-               alt="logo"
-               width={32}
-               height={32}
-               className="mr-2 md:hidden"
-            />
+         <Link href="/" className="flex items-center">
+            <ScrollText size={40} className="stroke-white mr-1" />
+            <h1 className="text-gray-100 hidden md:block text-xl">Sync Docs</h1>
          </Link>
          {children}
       </div>

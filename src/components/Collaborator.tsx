@@ -50,14 +50,14 @@ function Collaborator({
             />
 
             <div>
-               <div className="line-clamp-1 text-sm font-semibold leading-4 text-white">
+               <div className="line-clamp-1 text-sm font-semibold leading-4 text-black">
                   {collaborator.name}
 
-                  <span className="text-10-regular pl-2 text-blue-100">
+                  <span className="text-10-regular pl-2 text-gray-700">
                      {loading && "updating.."}
                   </span>
                </div>
-               <div className="text-sm font-light text-blue-100">
+               <div className="text-sm font-bold text-gray-700">
                   {collaborator.email === user.email ? "You" : collaborator.email}
                </div>
             </div>

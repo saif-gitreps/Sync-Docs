@@ -10,8 +10,8 @@
 /* ========================================== TAILWIND STYLES */
 @layer base {
    :root {
-      background: #09111f;
-      color: #fff;
+      background: #fff;
+      color: #09111f;
       margin: 0;
    }
 
@@ -44,14 +44,14 @@
    }
 
    .gradient-blue {
-      @apply bg-gradient-to-t from-blue-500 to-blue-400;
+      @apply bg-gradient-to-t from-gray-800 to-gray-600;
    }
    .gradient-red {
       @apply bg-gradient-to-t from-red-500 to-red-400;
    }
 
    .shad-dialog {
-      @apply w-full max-w-[400px] rounded-xl border-none bg-doc bg-cover px-5 py-7 shadow-xl sm:min-w-[500px] !important;
+      @apply w-full max-w-[400px] rounded-xl border-none bg-white bg-cover px-5 py-7 shadow-xl sm:min-w-[500px] !important;
    }
 
    .shad-dialog button {
@@ -59,7 +59,7 @@
    }
 
    .shad-select {
-      @apply w-fit border-none bg-transparent text-blue-100 !important;
+      @apply w-fit border-none text-black bg-white !important;
    }
 
    .shad-select svg {
@@ -67,15 +67,15 @@
    }
 
    .shad-select-item {
-      @apply cursor-pointer bg-dark-200 text-blue-100 focus:bg-dark-300 hover:bg-dark-300 focus:text-blue-100 !important;
+      @apply cursor-pointer bg-gray-200 text-black !important;
    }
 
    .shad-popover {
-      @apply w-[460px] border-none bg-dark-200 shadow-lg !important;
+      @apply w-[460px] border-none bg-gray-50 shadow-md !important;
    }
 
    .floating-toolbar {
-      @apply flex w-full min-w-max items-center justify-center gap-2 rounded-lg bg-dark-350 p-1.5 shadow-xl;
+      @apply flex w-full min-w-max items-center justify-center gap-2 rounded-lg bg-white p-1.5 shadow-xl;
    }
 
    .floating-toolbar-btn {
@@ -83,15 +83,15 @@
    }
 
    .toolbar-wrapper {
-      @apply z-50 custom-scrollbar w-screen overflow-auto border-y border-dark-300 bg-dark-100 pl-3 pr-4 shadow-sm;
+      @apply z-50 custom-scrollbar w-screen overflow-auto flex justify-center;
    }
 
    .editor-wrapper {
-      @apply custom-scrollbar h-[calc(100vh-140px)] gap-5 overflow-auto px-5 pt-5 lg:flex-row lg:items-start lg:justify-center  xl:gap-10 xl:pt-10;
+      @apply custom-scrollbar h-[calc(100vh-140px)] gap-5 overflow-auto pt-5 lg:flex-row lg:items-start lg:justify-center  xl:gap-10 xl:pt-10;
    }
 
    .header {
-      @apply min-h-[92px] min-w-full flex-nowrap bg-dark-100 flex w-full items-center justify-between gap-2 px-4;
+      @apply min-h-[72px] bg-black flex items-center justify-between w-full gap-2 px-4;
    }
 
    .document-list-container {
@@ -103,11 +103,11 @@
    }
 
    .document-list-item {
-      @apply flex items-center justify-between gap-4 rounded-lg bg-doc bg-cover p-5 shadow-xl;
+      @apply flex items-center justify-between gap-4 rounded-lg bg-gray-50 bg-cover p-5 shadow-md border;
    }
 
    .document-list-empty {
-      @apply flex w-full max-w-[730px] flex-col items-center justify-center gap-5 rounded-lg bg-dark-200 px-10 py-8;
+      @apply flex w-full max-w-[730px] flex-col items-center justify-center gap-5 rounded-lg bg-gray-200 px-10 py-8;
    }
 
    .document-title-input {
@@ -115,11 +115,11 @@
    }
 
    .document-title {
-      @apply line-clamp-1 border-dark-400 text-base font-semibold leading-[24px] sm:pl-0 sm:text-xl;
+      @apply line-clamp-1 border-black text-base font-semibold leading-[24px] sm:pl-0 sm:text-xl;
    }
 
    .view-only-tag {
-      @apply rounded-md bg-dark-400/50 px-2 py-0.5 text-xs text-blue-100/50;
+      @apply rounded-md bg-gray-200 px-2 py-0.5 text-xs text-black;
    }
 
    .collaborators-list {
@@ -127,7 +127,7 @@
    }
 
    .share-input {
-      @apply h-11 flex-1 border-none bg-dark-400 focus-visible:ring-0 focus-visible:ring-offset-0 !important;
+      @apply h-11 flex-1 border-none bg-gray-300 focus-visible:ring-0 focus-visible:ring-offset-0 !important;
    }
 
    .remove-btn {
@@ -139,15 +139,15 @@
    }
 
    .comment-composer {
-      @apply w-full max-w-[800px] border border-dark-300 bg-dark-200 shadow-sm lg:w-[350px];
+      @apply w-full max-w-[800px] border border-gray-300 bg-gray-200 shadow-sm lg:w-[350px];
    }
 
    .comment-thread {
-      @apply w-full max-w-[800px] border border-dark-300 bg-dark-200 shadow-sm lg:w-[350px] transition-all;
+      @apply w-full max-w-[800px] border border-gray-300 bg-gray-200 shadow-sm lg:w-[350px] transition-all;
    }
 
    .loader {
-      @apply flex size-full h-screen items-center justify-center gap-3 text-white;
+      @apply flex size-full h-screen items-center justify-center gap-3 text-black;
    }
 
    /* ======================== Auth Pages */
@@ -184,7 +184,7 @@
 .cl-signIn-start,
 .cl-signUp-start,
 .cl-footer {
-   background: #060d18;
+   background: #c3c3c3;
    box-shadow: none;
    padding: 20px;
 }
@@ -206,26 +206,26 @@
 
 /* ======================== Liveblocks Override */
 .lb-root {
-   --lb-accent-subtle: #0b1527;
+   --lb-accent-subtle: #ffffff;
    --lb-radius: 0px;
-   --lb-dynamic-background: #1b2840;
+   --lb-dynamic-background: #a5a5a5;
 }
 
 .lb-comment,
 .lb-thread-comments,
 .lb-composer,
 .lb-comment-reaction {
-   background-color: #0f1c34;
-   color: #fff;
+   background-color: #b7b7b7;
+   color: #000000;
 }
 
 .lb-button {
-   --lb-foreground-moderate: #fff;
+   --lb-foreground-moderate: #000000;
 }
 
 .lb-button:where([data-variant="primary"]) {
-   background-color: #161e30;
-   color: #b4c6ee;
+   background-color: #c2c2c2;
+   color: #000000;
    padding: 8px;
 }
 
@@ -239,7 +239,7 @@
                )
          )
    ) {
-   color: #b4c6ee;
+   color: #000000;
 }
 
 .lb-button:where(
@@ -248,9 +248,9 @@
       [aria-expanded="true"],
       [aria-selected="true"]
    ) {
-   --lb-button-background: #161e30;
+   --lb-button-background: #f2f2f2;
 
-   color: #b4c6ee;
+   color: #000000;
 }
 
 .lb-inbox-notification-list-item:where(:not(:last-of-type)) {
@@ -261,7 +261,7 @@
 .lb-dropdown-item,
 .lb-dropdown-item-icon,
 .lb-composer-editor {
-   color: #fff;
+   color: #000000;
 }
 
 .lb-composer-action {
@@ -269,7 +269,7 @@
 }
 
 .lb-comment-content {
-   background: #0b1527;
+   background: #ffffff;
    margin-top: 16px;
    padding: 12px;
    border-radius: 4px;
@@ -281,20 +281,20 @@
 .lb-composer-suggestions-list-item,
 .lb-inbox-notification-date,
 .lb-comment-author {
-   color: #b4c6ee;
+   color: #000000;
 }
 
 .data-liveblocks-portal {
-   color: #b4c6ee !important;
+   color: #000000 !important;
 }
 
 .lb-root:where(:not(.lb-root .lb-root)) {
-   --lb-dynamic-background: #1b2840;
-   color: #fff;
+   --lb-dynamic-background: #ffffff;
+   color: #000000;
 }
 
 .lb-composer-editor :where([data-placeholder]) {
-   color: #b4c6ee;
+   color: #000000;
    font-size: 14px;
 }
 
@@ -303,5 +303,5 @@
 }
 
 .lb-elevation {
-   background: #0f1c34;
+   background: #ffffff;
 }

@@ -64,11 +64,11 @@ function AllowAccessModal({
                </DialogDescription>
             </DialogHeader>
 
-            <Label htmlFor="email" className="mt-6 text-blue-100 ">
+            <Label htmlFor="email" className="mt-6 text-black ">
                Email
             </Label>
             <div className="flex items-center gap-3">
-               <div className="flex flex-1 rounded-md bg-dark-400">
+               <div className="flex flex-1 rounded-md bg-white shadow-md">
                   <Input
                      id="email"
                      type="email"

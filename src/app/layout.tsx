@@ -17,7 +17,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-   title: "Realtime docs editor",
+   title: "Sync Docs - Realtime docs editor",
    description: "Realtime docs editor",
 };
 
