@@ -128,7 +128,7 @@ function CollaborativeRoom({
                      </SignedIn>
                   </div>
                </Header>
-               <Editor roomId={roomId} currentUserType={currentUserType} />
+               <Editor currentUserType={currentUserType} />
             </div>
          </ClientSideSuspense>
       </RoomProvider>

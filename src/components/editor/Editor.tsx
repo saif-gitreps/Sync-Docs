@@ -30,13 +30,7 @@ function Placeholder() {
    return <div className="editor-placeholder">Enter some rich text...</div>;
 }
 
-export function Editor({
-   roomId,
-   currentUserType,
-}: {
-   roomId: string;
-   currentUserType: UserType;
-}) {
+export function Editor({ currentUserType }: { currentUserType: UserType }) {
    const status = useEditorStatus();
 
    const { threads } = useThreads();
